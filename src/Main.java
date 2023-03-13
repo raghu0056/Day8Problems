@@ -1,24 +1,22 @@
 
-import java.util.Random;
+import java.util.Scanner;
 class Employee
         {
-            String p="Present";
-           String a="Absent";
+         int Wage=20;
+
         }
  public class Main
 {
     public static void main(String[] args)
     {
-        Random rand = new Random();
-        int value = rand.nextInt(100);
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Note:Today working hours of per day is 8 hours");
+        System.out.print("");
+        System.out.println( "Enter the number working hours: ");
+        int WorkingHours = sc.nextInt();
         Employee ob=new Employee();
-        if(value < 50)
-     {
-         System.out.println("Employee is " +ob.p);
-     }
-     else
-     {
-         System.out.println("Employee is " +ob.a);
-     }
+        int TotalWages=WorkingHours * ob.Wage;
+
+        System.out.println("Employee is " +TotalWages);
     }
 }
